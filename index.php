@@ -152,10 +152,10 @@ class CountdownTimer
     $this->box = imagecreatetruecolor($this->width, $this->height);
     $this->base = imagecreatetruecolor($this->width, $this->height);
 
-    $this->fontSettings['path'] = $this->fontPath . $settings['font'] . '.ttf';
+    $this->fontSettings['path'] = __DIR__ . '/' . $this->fontPath . $settings['font'] . '.ttf';
     $this->fontSettings['color'] = imagecolorallocate($this->box, $this->fontColor[0], $this->fontColor[1], $this->fontColor[2]);
     $this->fontSettings['size'] = $settings['fontSize'];
-    $this->fontSettings['characterWidth'] = imagefontwidth($this->fontSettings['path']);
+    $this->fontSettings['characterWidth'] = 0;
 
     // get the width of each character
     $string = "0:";
@@ -167,7 +167,7 @@ class CountdownTimer
     for ($i = 0; $i < $strlen; $i++) {
       $dimensions = imagettfbbox($size, $angle, $fontfile, $string[$i]);
       $this->fontSettings['characterWidths'][] = array(
-        $string[i] => $dimensions[2]
+        $string[$i] => $dimensions[2]
       );
     }
 
@@ -186,7 +186,7 @@ class CountdownTimer
 
   /**
    * createFrames
-   * Create all of the frames for 
+   * Create all of the frames for
    * the countdown timer
    * @return void
    */
@@ -238,7 +238,7 @@ class CountdownTimer
 
     // apply the labels to the image $this->yOffset + ($this->characterHeight * 0.8)
     foreach ($labels as $key => $label) {
-      imagettftext($image, 15, 0, $this->xOffset + ($this->characterWidth * $this->labelOffsets[$key]), 98, $font['color'], $font['path'], $label);
+      imagettftext($image, 15, 0, (int) ($this->xOffset + ($this->characterWidth * $this->labelOffsets[$key])), 98, $font['color'], $font['path'], $label);
     }
 
     // apply time to new image
