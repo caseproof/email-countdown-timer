@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "02271911e0b7644acb1e2da1a5c1aea0",
+    "content-hash": "5d24455dc5390412880a7c9ad64ae349",
     "packages": [],
     "packages-dev": [
         {
             "name": "heroku/heroku-buildpack-php",
-            "version": "v227",
+            "version": "v297",
             "source": {
                 "type": "git",
                 "url": "https://github.com/heroku/heroku-buildpack-php.git",
-                "reference": "29337531e7db820ba6f4d45a9d6521f60b8c27d9"
+                "reference": "21fc76f0cae8933d469f05d9a00e6ec19b0fb92c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/29337531e7db820ba6f4d45a9d6521f60b8c27d9",
-                "reference": "29337531e7db820ba6f4d45a9d6521f60b8c27d9",
+                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/21fc76f0cae8933d469f05d9a00e6ec19b0fb92c",
+                "reference": "21fc76f0cae8933d469f05d9a00e6ec19b0fb92c",
                 "shasum": ""
             },
             "bin": [
@@ -48,19 +48,20 @@
             ],
             "support": {
                 "issues": "https://github.com/heroku/heroku-buildpack-php/issues",
-                "source": "https://github.com/heroku/heroku-buildpack-php/tree/v227"
+                "source": "https://github.com/heroku/heroku-buildpack-php/tree/v297"
             },
-            "time": "2022-11-03T18:53:51+00:00"
+            "time": "2026-09-25T10:50:25+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
+        "php": "~8.5.0",
         "ext-gd": "*"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
 }

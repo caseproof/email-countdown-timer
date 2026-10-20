@@ -79,6 +79,46 @@ class CountdownTimer
   private $seconds = 30;
 
   /**
+   * @var array
+   */
+  private $boxColor = array();
+
+  /**
+   * @var array
+   */
+  private $fontColor = array();
+
+  /**
+   * @var array
+   */
+  private $labelOffsets = array();
+
+  /**
+   * @var array
+   */
+  private $images = array();
+
+  /**
+   * @var array
+   */
+  private $characterDimensions = array();
+
+  /**
+   * @var int
+   */
+  private $characterWidth = 0;
+
+  /**
+   * @var int
+   */
+  private $characterHeight = 0;
+
+  /**
+   * @var int
+   */
+  private $loops = 0;
+
+  /**
    * hex2rgb
    * Convert a hex
    * colour to rgb
