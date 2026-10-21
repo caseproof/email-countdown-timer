@@ -1,6 +1,6 @@
 {
   "require": {
-    "php": "~8.5.0",
+    "php": "~8.5.12",
     "ext-gd": "*"
   },
   "require-dev": {
